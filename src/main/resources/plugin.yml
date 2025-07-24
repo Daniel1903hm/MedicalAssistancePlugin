@@ -1,0 +1,29 @@
+name: medicalassistance
+version: "1.0-SNAPSHOT"
+author: Daniel1903hm
+main: com.daniel1903hm.Main
+api-version: '1.20'
+
+
+commands:
+  medicalAssistance:
+    description: main command
+    aliases:
+    - ma
+    usage: /<command>
+    permission: medicalAssistance.use
+    permission-message: You don't have permission to do that
+
+permissions:
+  medicalAssistance.use:
+    default: op
+  medicalAssistance.medicine:
+    default: op
+  medicalAssistance.allowRegen:
+    default: op
+  medicalAssistance.admin:
+    default: op
+    inherits:
+    - medicalAssistance.use
+    - medicalAssistance.medicine
+    - medicalAssistance.allowRegen
